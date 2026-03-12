@@ -1,0 +1,50 @@
+# Arquivos de Byte-code e Cache
+__pycache__/
+*.pyc
+
+# Arquivos de Banco de Dados
+*.sqlite3
+db.sqlite3
+
+# Arquivos de Ambiente Virtual
+.env
+.venv
+venv/
+ENV/
+env/
+virtualenv/
+
+# Arquivos gerados pelo Django
+*.log
+local_settings.py
+
+# Arquivos de Mídia e Estáticos coletados
+/media/
+/staticfiles/
+
+# Arquivos de IDE e Editores
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Arquivos gerados pelo SO
+.DS_Store
+Thumbs.db
+
+# Arquivos de dependências do Python
+*.egg-info/
+pip-wheel-metadata/
+
+# Arquivos de build e distribuição
+build/
+dist/
+*.egg
+
+# Arquivos de teste
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Vercel
+.vercel/

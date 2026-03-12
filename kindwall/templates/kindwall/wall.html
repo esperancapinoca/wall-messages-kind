@@ -1,0 +1,60 @@
+{% extends 'kindwall/base.html' %}
+
+{% block content %}
+
+<div class="message-counter">
+💜 {{ message_count }} Kind Messages Shared
+</div>
+
+<div class="form-container">
+
+<h2>Send a kind message</h2>
+
+<form method="POST" class="message-form">
+    {% csrf_token %}
+
+    <div class="form-group">
+        <label>Author Name</label>
+        {{ form.author_name }}
+    </div>
+
+    <div class="form-group">
+        <label>Your Message</label>
+        {{ form.text }}
+    </div>
+
+    <button type="submit" class="send-btn">
+        Send
+    </button>
+
+</form>
+
+</div>
+
+
+<div class="messages-container">
+
+{% for message in messages %}
+
+<div class="message-card {% cycle 'card1' 'card2' 'card3' 'card4' 'card5' %}">
+
+<h3 class="message-author">{{ message.author_name }}</h3>
+
+<p class="message-text">{{ message.text }}</p>
+
+<small class="message-date">{{ message.created_at }}</small>
+
+<br><br>
+
+
+<a href="{% url 'like_message' message.id %}" class="like-btn">
+<i class="fa-regular fa-heart"></i> {{ message.likes }}
+</a>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+{% endblock %}

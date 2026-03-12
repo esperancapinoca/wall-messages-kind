@@ -1,0 +1,171 @@
+/* ===============================
+   MESSAGES CONTAINER
+================================ */
+
+.messages-container{
+    width:60%;
+    margin:auto;
+    margin-top:60px;
+}
+
+/* ===============================
+   MESSAGE CARDS
+================================ */
+
+.message-card{
+    padding:20px;
+    border-radius:30px;
+    margin-bottom:20px;
+    color:white;
+    box-shadow:0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* AUTOR */
+.message-author{
+    font-family:"Lavishly Yours", cursive;
+    font-size:28px;
+    margin:0 0 5px 0; /* espaço abaixo do autor */
+}
+
+/* TEXTO DA MENSAGEM */
+.message-text{
+    font-family:"EB Garamond", serif;
+    font-style:italic;
+    font-size:18px;
+    line-height:1.6;
+    text-indent:25px; /* tipo tab */
+    margin:0 0 8px 0;
+}
+
+/* DATA */
+.message-date{
+    display:block;
+    font-size:12px; /* menor que o texto */
+    text-align:right; /* direita */
+    color:rgba(0,0,0,0.7);
+    margin-top:10px; /* distância acima */
+}
+
+/* CARD COLORS */
+.card1{ background:var(--card1); }
+.card2{ background:var(--card2); }
+.card3{ background:var(--card3); }
+.card4{ background:var(--card4); color:#49225B;}
+.card5{ background:var(--card5); color:#49225B;}
+
+/* ===============================
+   LIKE BUTTON
+================================ */
+
+.like-btn{
+    text-decoration:none;
+    color:black;
+    font-size:14px;
+    display:inline-flex;
+    gap:5px;
+    align-items:center;
+    margin-top:10px;
+}
+
+/* ===============================
+   FORM CONTAINER (GLASS EFFECT)
+================================ */
+
+.form-container{
+    width:35%;
+    margin:40px auto;
+    padding:20px;
+    backdrop-filter:blur(15px);
+    background:rgba(255,255,255,0.15);
+    border-radius:20px;
+    border:1px solid rgba(255,255,255,0.3);
+    box-shadow:0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* TÍTULO DO FORMULÁRIO */
+.form-container h2{
+    font-family:"Lavishly Yours", cursive;
+    font-size:42px;
+    text-align:center;
+    color:#49225B;
+    margin-bottom:20px;
+    letter-spacing:2px;
+}
+
+/* ===============================
+   FORM STRUCTURE
+================================ */
+
+.message-form{
+    display:flex;
+    flex-direction:column;
+}
+
+.form-group{
+    margin-bottom:15px;
+}
+
+.form-group label{
+    font-size:13px;
+    color:#49225B;
+    font-family:"EB Garamond", serif;
+}
+
+/* ===============================
+   INPUT STYLE
+================================ */
+
+.message-form input,
+.message-form textarea{
+    width:100%;
+    border:none;
+    border-bottom:1px solid #6E3482;
+    background:transparent;
+    padding:6px 3px;
+    font-size:14px;
+    outline:none;
+    font-family:"EB Garamond", serif;
+}
+
+/* ===============================
+   SEND BUTTON
+================================ */
+
+.send-btn{
+    margin-top:10px;
+    padding:8px 14px;
+    border:none;
+    border-radius:12px;
+    background:linear-gradient(90deg,#6E3482,#A56ABD);
+    color:white;
+    font-size:14px;
+    cursor:pointer;
+    align-self:flex-end;
+    transition:0.3s;
+}
+
+.send-btn:hover{
+    transform:scale(1.05);
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+
+@media (max-width:768px){
+    .navbar{
+        width:90%;
+    }
+
+    .form-container{
+        width:90%;
+    }
+
+    .messages-container{
+        width:90%;
+    }
+
+    .message-counter{
+        width:80%;
+    }
+}

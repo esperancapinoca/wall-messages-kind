@@ -1,0 +1,47 @@
+:root {
+--card1:#49225B;
+--card2:#6E3482;
+--card3:#A56ABD;
+--card4:#E7DBEF;
+--card5:#F5EBFA;
+}
+
+body{
+
+margin:0;
+font-family:"EB Garamond", serif;
+
+background:linear-gradient(
+180deg,
+#f5ebfa 0%,
+#a56abd 40%,
+#6e3482 70%,
+#49225b 100%
+);
+
+min-height:100vh;
+
+padding-top:120px;
+}
+
+/* contador de mensagens */
+
+.message-counter{
+
+text-align:center;
+
+backdrop-filter:blur(10px);
+background:rgba(255,255,255,0.15);
+
+border-radius:15px;
+
+border:1px solid rgba(255,255,255,0.3);
+
+padding:10px;
+
+width:300px;
+
+margin:0 auto;
+
+color:#49225B;
+}

@@ -1,0 +1,13 @@
+{
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "api/wsgi.py"
+    }
+  ],
+  "functions": {
+    "api/wsgi.py": {
+      "excludeFiles": "{tests/**,__tests__/**,**/*.test.py,**/test_*.py,fixtures/**,__fixtures__/**,testdata/**,sample-data/**,static/**,assets/**,venv/**,db.sqlite3}"
+    }
+  }
+}

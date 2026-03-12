@@ -1,0 +1,40 @@
+footer{
+
+    text-align:center;
+    padding:40px 20px;
+    margin-top:60px;
+    color:#000000;
+    font-size:15px;
+}
+
+footer a{
+
+    margin:0 12px;
+    text-decoration:none;
+    color:black;
+    font-weight:500;
+    transition:0.3s;
+
+}
+
+footer a:hover{
+
+    color:#6E3482;
+
+}
+
+footer p{
+margin:10px 0;
+}
+
+footer i{
+font-size:22px;
+margin-right:6px;
+}
+
+footer p:last-child{
+
+font-family:"Lavishly Yours", cursive;
+font-size:28px;
+margin-top:10px;
+}

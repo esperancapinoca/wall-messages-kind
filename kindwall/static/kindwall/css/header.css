@@ -1,0 +1,35 @@
+.navbar {
+
+position:fixed;
+
+top:15px;
+left:50%;
+
+transform:translateX(-50%);
+
+width:60%;
+
+padding:10px;
+
+backdrop-filter:blur(10px);
+background:rgba(255,255,255,0.15);
+
+border-radius:15px;
+
+border:1px solid rgba(255,255,255,0.3);
+
+text-align:center;
+
+z-index:1000;
+}
+
+.nav-title{
+
+font-family:"Lavishly Yours", cursive;
+
+font-size:32px;
+
+color:#49225B;
+
+margin:0;
+}
