@@ -79,7 +79,7 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': '/tmp/db.sqlite3' if 'vercel' in os.environ.get('VERCEL_URL', '') or 'VERCEL' in os.environ else BASE_DIR / 'db.sqlite3',
     }
 }
 
