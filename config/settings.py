@@ -19,7 +19,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-ml!!5rh*n%(!l95)2gqkmyrz$xq#lz36zb=l$xz2f_zk_+)2r@'
 DEBUG = False
 
-ALLOWED_HOSTS = ['.vercel.app', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['*', '.vercel.app', 'localhost', '127.0.0.1']
 
 # ===============================
 # STATIC FILES
@@ -77,10 +77,10 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # DATABASE
 # ===============================
 DATABASES = {
-    'default': dj_database_url.parse(
-        os.environ.get("DATABASE_URL", f"sqlite:///{BASE_DIR}/db.sqlite3"),
-        conn_max_age=600
-    )
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
 }
 
 # ===============================
