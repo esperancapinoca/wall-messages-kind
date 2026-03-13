@@ -64,7 +64,13 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # Aponta para a pasta de estáticos do app (onde estão os .css)
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'kindwall', 'static')]
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+# Django 6 usa STORAGES para configurar o backend de estáticos (substitui STATICFILES_STORAGE).
+STORAGES = {
+    'staticfiles': {
+        'BACKEND': 'whitenoise.storage.CompressedManifestStaticFilesStorage',
+    },
+}
 
 # PASSWORD VALIDATION
 AUTH_PASSWORD_VALIDATORS = [
