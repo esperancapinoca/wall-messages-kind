@@ -62,7 +62,8 @@ DATABASES = {
 # STATIC FILES (Configuração para o WhiteNoise servir o CSS)
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+# Aponta para a pasta de estáticos do app (onde estão os .css)
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'kindwall', 'static')]
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # PASSWORD VALIDATION
