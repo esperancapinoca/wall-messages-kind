@@ -66,11 +66,16 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'kindwall', 'static')]
 
 # Django 6 usa STORAGES para configurar o backend de estáticos (substitui STATICFILES_STORAGE).
+# Para evitar 500/404 por falta de manifest em ambiente serverless, usamos CompressedStaticFilesStorage (sem manifest).
 STORAGES = {
     'staticfiles': {
-        'BACKEND': 'whitenoise.storage.CompressedManifestStaticFilesStorage',
+        'BACKEND': 'whitenoise.storage.CompressedStaticFilesStorage',
     },
 }
+
+# Permite fallback para buscar arquivos direto nas pastas de estáticos dos apps
+# caso o collectstatic não tenha rodado (útil em ambiente serverless).
+WHITENOISE_USE_FINDERS = True
 
 # PASSWORD VALIDATION
 AUTH_PASSWORD_VALIDATORS = [
