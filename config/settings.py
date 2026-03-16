@@ -72,6 +72,9 @@ STORAGES = {
     },
 }
 
+# Se o manifest não estiver presente (deploy sem collectstatic), não quebrar com 500.
+WHITENOISE_MANIFEST_STRICT = False
+
 # PASSWORD VALIDATION
 AUTH_PASSWORD_VALIDATORS = [
     {'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',},
