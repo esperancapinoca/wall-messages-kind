@@ -75,6 +75,10 @@ STORAGES = {
 # Se o manifest não estiver presente (deploy sem collectstatic), não quebrar com 500.
 WHITENOISE_MANIFEST_STRICT = False
 
+# Permite fallback para buscar arquivos direto nas pastas de estáticos dos apps
+# caso o manifest não exista (útil em ambiente serverless).
+WHITENOISE_USE_FINDERS = True
+
 # PASSWORD VALIDATION
 AUTH_PASSWORD_VALIDATORS = [
     {'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',},
